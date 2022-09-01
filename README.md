@@ -23,27 +23,28 @@
 This package is used to _create_ PDFs using React. If you wish to _display_ existing PDFs, you may be looking for [react-pdf](https://github.com/wojtekmaj/react-pdf).
 
 ## How to install
+
 ```sh
-yarn add @react-pdf/renderer
+yarn add react-pdf-renderer-v2
 ```
 
 ## How it works
 
 ```jsx
 import React from 'react';
-import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
+import { Document, Page, Text, View, StyleSheet } from 'react-pdf-renderer-v2';
 
 // Create styles
 const styles = StyleSheet.create({
   page: {
     flexDirection: 'row',
-    backgroundColor: '#E4E4E4'
+    backgroundColor: '#E4E4E4',
   },
   section: {
     margin: 10,
     padding: 10,
-    flexGrow: 1
-  }
+    flexGrow: 1,
+  },
 });
 
 // Create Document Component
@@ -62,10 +63,11 @@ const MyDocument = () => (
 ```
 
 ### `Web.` Render in DOM
+
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { PDFViewer } from '@react-pdf/renderer';
+import { PDFViewer } from 'react-pdf-renderer-v2';
 
 const App = () => (
   <PDFViewer>
@@ -77,9 +79,10 @@ ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
 ### `Node.` Save in a file
+
 ```jsx
 import React from 'react';
-import ReactPDF from '@react-pdf/renderer';
+import ReactPDF from 'react-pdf-renderer-v2';
 
 ReactPDF.render(<MyDocument />, `${__dirname}/example.pdf`);
 ```
@@ -109,4 +112,5 @@ MIT © [Diego Muracciole](http://github.com/diegomura)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fdiegomura%2Freact-pdf.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fdiegomura%2Freact-pdf?ref=badge_large)
 
 ---
+
 ![](https://img.shields.io/npm/dt/@react-pdf/renderer.svg?style=flat)
